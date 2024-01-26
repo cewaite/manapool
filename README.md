@@ -70,9 +70,12 @@ Godot 4 Game Engine
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+I'm going to use this to explain architecture and organization in hopes that good foundations can make for an easily scalable game. This stuff is tentative; open to additions, improvements and refactoring, need be.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Spells
+
+### Globals
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
