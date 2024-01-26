@@ -46,15 +46,14 @@
 Manapool, battle the Dark as a wizard surviving a magic dystopian city in this 2D isometric, souls-like, bullet hell. 
 
 - Explore and fight through a level of enemies who drop Moonlight, the soulslike currency in the city.
-- You carry a melee weapon and have memorized spells for your journey, both viable on their own but can be interweaved in combat. All the while, balancing health, mana used to cast your magic and stamina. (“Your spell” is a powerful ranged attack that costs mana, which can deplete. Melee attacks and dashing cost stamina, which recovers shortly after an attack or dodge. Successive melee attacks regain small amounts of mana).
+- The wizard can carry a melee weapon and have memorized spells for their journey, both viable on their own but can be interweaved in combat. All the while, balancing health, mana used to cast magic and stamina. (Two ranged spells, two AOE spells equipped at all times. Melee attacks and dashing cost stamina, which recovers shortly after an attack or dodge. Successive melee attacks regain small amounts of mana).
 - Levels are linear but can offer a more challenging or hidden path that reward (or punish) the player for taking.
 - Enemies placed throughout the level provide challenge and Moonlight when defeated.
-- Players rest at Manapools under the magic granting moonlight. Restores the players health and mana (used to cast spells). Players can fast travel to other manapools and use Moonlight on the skill tree.
-- The skill tree branches top down and is split up into two categories: Melee and Magic. Allowing player to focus on one or the other, or spread evenly into both
-- Levels end in bosses, operating like a bullet hell with magic and like a souls like as the boss attacks players with melee
-- The wizard can dash to avoid attacks. (Possibly holding to extent or tap for quick dash, allowing precise movement for the player)
-- The wizard must weave their magic casting and melee attacking into their evasive movement to survive and purge the Dark
-- When the wizard dies, he drops
+- Players rest at Manapools under the magic granting moonlight. Restores the players health and mana. Players can fast travel to other manapools, swap out equipped spells and use Moonlight to upgrade spells, weapons and wizard stats.
+- Levels end in bosses, operating like a bullet hell with magic and like a souls like as the boss attacks players with melee.
+- The wizard can dash to avoid attacks. (Holding to extent or tap for quick dash, allowing precise movement for the player).
+- The wizard must weave their magic casting and melee attacking into their evasive movement to survive and purge the Dark.
+- When the wizard dies, he drops all his Moonlight and respawns at their last Manapool. They can retrieve it or lose it if they fail to before they die again.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
