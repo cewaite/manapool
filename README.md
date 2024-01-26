@@ -32,6 +32,10 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+      <ul>
+        <li><a href="#spells">Spells</a></li>
+        <li><a href="#globals">Globals</a></li>
+      </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -74,8 +78,20 @@ I'm going to use this to explain architecture and organization in hopes that goo
 
 ### Spells
 
+Spells are structured in a hierarchy of inheritance, layed out at such:
+
+- SpellParent
+  - RangedSpell
+    - Firebolt...
+  - AOESpell
+    - Whirlpool...
+
+Each Spell has an associated SpellEffect, which is the actual projectile that is spawned when the spell is cast.
+
 ### Globals
 
+- SpellManager = Manages the spells the Ppayer has discovered, equipped and casts
+- StatManager = Useless rn but may be needed to better UI implementation and/or stat upgrades for the player
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,14 +100,37 @@ I'm going to use this to explain architecture and organization in hopes that goo
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+A tentative list that should be refined and granularized as we progress.
 
+Needs:
+- [ ] Add another ranged spell
+- [ ] Add another AOE spell
+- [ ] Add melee attacks
+    - [ ] 3 hit combo
+    - [ ] Successive melee regains mana
+- [ ] "Inventory"
+    - [ ] Keep track of known/equipped spells
+- [ ] Manapools
+    - [ ] Checkpointing
+    - [ ] Recover stats
+    - [ ] Upgrades
+    - [ ] Swapping spells
+- [ ] Design a level
+    - [ ] incorporate a trap/ambush
+    - [ ] incorporate a secret/hidden path
+    - [ ] Have at least two branching paths
+- [ ] Enemy design
+    - [ ] Basic enemy, melee only
+    - [ ] 2 spell casting and melee enemies
+    - [ ] Final boss
+
+Wants:
+- [ ] Items
+    - [ ] Health/Mana potions
+    - [ ] Damage buffs
+- [ ] Teleporting for Manapools
+- [ ] More Spells
+- [ ] More enemies
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
