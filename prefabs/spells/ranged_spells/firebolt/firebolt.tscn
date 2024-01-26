@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://1ibpkh722sl1"]
+
+[ext_resource type="Script" path="res://prefabs/spells/ranged_spells/firebolt/firebolt.gd" id="1_8tc4f"]
+
+[node name="Firebolt" type="Node2D"]
+script = ExtResource("1_8tc4f")
+speed = null
+duration = null
+cooldown = null
+mana_cost = null
+damage = null
+destroy_on_hit = null
+group_name = null

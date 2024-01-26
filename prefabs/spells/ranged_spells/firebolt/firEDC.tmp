@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://ceq1eu2xfhq2c"]
+
+[ext_resource type="Script" path="res://prefabs/spells/ranged_spells/firebolt/firebolt_effect.gd" id="1_5mrqk"]
+[ext_resource type="Script" path="res://prefabs/spell_hitbox.gd" id="2_6qkgc"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dv6nv"]
+particle_flag_disable_z = true
+angular_velocity_max = 180.0
+gravity = Vector3(0, 0, 0)
+scale_min = 30.0
+scale_max = 30.0
+color = Color(1, 0.741176, 0.180392, 1)
+
+[sub_resource type="Gradient" id="Gradient_8bow0"]
+offsets = PackedFloat32Array(0.0133779, 0.090301, 0.949833, 1)
+colors = PackedColorArray(1, 0.741176, 0.180392, 0, 1, 0.741176, 0.180392, 1, 0.798792, 0.138451, 0.123138, 1, 0.8, 0.137255, 0.121569, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lbcwt"]
+gradient = SubResource("Gradient_8bow0")
+width = 100
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p0x7o"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+direction = Vector3(0, -1, 0)
+angular_velocity_min = -45.0
+angular_velocity_max = 45.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 25.0
+linear_accel_max = 50.0
+scale_min = 2.0
+scale_max = 5.0
+color_ramp = SubResource("GradientTexture1D_lbcwt")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6pgy"]
+radius = 30.7318
+
+[node name="FireboltEffect" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_5mrqk")
+
+[node name="InnerParticle" type="GPUParticles2D" parent="."]
+scale = Vector2(1.5, 1.5)
+amount = 5
+process_material = SubResource("ParticleProcessMaterial_dv6nv")
+local_coords = true
+
+[node name="OuterParticles" type="GPUParticles2D" parent="."]
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_p0x7o")
+lifetime = 0.3
+speed_scale = 2.0
+
+[node name="SpellHitBox" type="Area2D" parent="."]
+script = ExtResource("2_6qkgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpellHitBox"]
+shape = SubResource("CircleShape2D_o6pgy")

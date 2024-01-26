@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drkej58coffsy"]
+
+[ext_resource type="Script" path="res://prefabs/spells/spell_parent/spell_parent.gd" id="1_euh7e"]
+
+[node name="Spell" type="Node2D"]
+script = ExtResource("1_euh7e")

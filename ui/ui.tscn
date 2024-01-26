@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6utoeejb1kh8"]
+
+[ext_resource type="PackedScene" uid="uid://t46k24na1k8a" path="res://ui/health_bar/health_bar.tscn" id="1_qr8py"]
+
+[node name="UI" type="CanvasGroup"]
+
+[node name="PlayerStats" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(9.33336, 25.2781)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerStats"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" parent="PlayerStats/VBoxContainer" instance=ExtResource("1_qr8py")]
+layout_mode = 2

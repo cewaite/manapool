@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://o0ud8tha4y26"]
+
+[ext_resource type="Script" path="res://ui/mana_bar/mana_bar.gd" id="1_a5dom"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ofpd5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j71vw"]
+bg_color = Color(0, 0.466667, 0.72549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e04qk"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6tnu"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="ManaBar" type="ProgressBar" node_paths=PackedStringArray("use_bar")]
+z_index = 1
+offset_right = 240.0
+offset_bottom = 15.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_ofpd5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_j71vw")
+value = 60.0
+show_percentage = false
+script = ExtResource("1_a5dom")
+use_bar = NodePath("UseBar")
+
+[node name="UseBar" type="ProgressBar" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 15.0
+theme_override_styles/background = SubResource("StyleBoxFlat_e04qk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e6tnu")
+value = 80.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

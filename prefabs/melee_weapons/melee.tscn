@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://chn45u8ynn4ik"]
+
+[ext_resource type="Texture2D" uid="uid://cfsr1wae3px1n" path="res://icon.svg" id="1_0rdlc"]
+[ext_resource type="Script" path="res://prefabs/hitbox.gd" id="2_oaxsk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dta3i"]
+size = Vector2(40, 239)
+
+[sub_resource type="Animation" id="Animation_r5dts"]
+resource_name = "attack"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.785398, -0.785398]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lwkvl"]
+_data = {
+"attack": SubResource("Animation_r5dts")
+}
+
+[node name="Melee" type="Node2D"]
+rotation = 0.785398
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.85406, -60.1351)
+scale = Vector2(0.13, 0.6)
+texture = ExtResource("1_0rdlc")
+
+[node name="HitBox" type="Area2D" parent="Sprite2D"]
+position = Vector2(6.09524, 0)
+scale = Vector2(3.04762, 0.535565)
+script = ExtResource("2_oaxsk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBox"]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_dta3i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lwkvl")
+}

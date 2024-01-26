@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0h8iguc33l8a"]
+
+[ext_resource type="Script" path="res://prefabs/spells/aoe_spells/whirlpool/whirlpool_effect.gd" id="1_fn6dr"]
+[ext_resource type="Script" path="res://prefabs/spell_hitbox.gd" id="1_q1blo"]
+
+[sub_resource type="Gradient" id="Gradient_tc0ip"]
+offsets = PackedFloat32Array(0.0367893, 0.622074, 0.879599, 1)
+colors = PackedColorArray(0, 0.411765, 0.580392, 0, 0, 0.411765, 0.580392, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rrhgu"]
+gradient = SubResource("Gradient_tc0ip")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0eh2b"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 100.0
+emission_ring_inner_radius = 120.0
+spread = 0.0
+angular_velocity_min = -218.85
+angular_velocity_max = 236.1
+orbit_velocity_min = 0.1
+orbit_velocity_max = 0.1
+radial_velocity_min = -5.0
+radial_velocity_max = -5.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -200.0
+scale_min = 10.0
+scale_max = 10.0
+color_ramp = SubResource("GradientTexture1D_rrhgu")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mrqg6"]
+
+[node name="WhirlpoolEffect" type="Node2D"]
+script = ExtResource("1_fn6dr")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_0eh2b")
+
+[node name="SpellHitBox" type="Area2D" parent="."]
+script = ExtResource("1_q1blo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpellHitBox"]
+scale = Vector2(11.155, 11.155)
+shape = SubResource("CircleShape2D_mrqg6")
