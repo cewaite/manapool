@@ -40,6 +40,7 @@
         <li><a href="#globals">Globals</a></li>
       </ul>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#downloading-the-project">Downloading The Project</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
