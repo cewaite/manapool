@@ -113,6 +113,7 @@ Needs:
     - [ ] Successive melee regains mana
 - [ ] "Inventory"
     - [ ] Keep track of known/equipped spells
+- [ ] Better Player UI
 - [ ] Manapools
     - [ ] Checkpointing
     - [ ] Recover stats
