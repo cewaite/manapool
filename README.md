@@ -117,6 +117,7 @@ There is a third hitbox: SpellHitbox. Used for SpellEffects, they have two addit
 A tentative list that should be refined and granularized as we progress.
 
 Needs:
+- [X] Marked finished tasks
 - [ ] Add another ranged spell
 - [ ] Add another AOE spell
 - [ ] Spell Effects
