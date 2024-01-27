@@ -153,7 +153,12 @@ Wants:
 - [ ] More enemies
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- PULLING -->
+## Downloading the Project
 
+1. Create a folder in your Godot project directory; whereever you want to store the game
+
+2. https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 <!-- CONTRIBUTING -->
 ## Contributing
