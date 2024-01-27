@@ -102,7 +102,6 @@ Hitboxes collide with Hurtboxes to register damage. Pass a HealthComponent into 
 
 There is a third hitbox: SpellHitbox. Used for SpellEffects, they have two additional variables: is_players (Checked upon collision with a Hurtbox to negate frendly spell damage) and destroy_on hit (I hope, self explanatory).
 
-
 ### Globals
 
 - SpellManager = Manages the spells the Ppayer has discovered, equipped and casts
@@ -160,6 +159,10 @@ Wants:
 1. Create a folder in your Godot project directory; whereever you want to store the game
 
 2. https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+3. Import the project into Godot and you're set
+
+Up to you if you want to fork off onto other branches, just remember to oull before working and push when you've made enough progress. If we run into merge errors, we can try sorting it out but ultimately it would be easier if we kept our workflow linear. We can communicate when we'll be working and when we've pushed. 
 
 <!-- CONTRIBUTING -->
 ## Contributing
