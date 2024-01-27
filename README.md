@@ -129,6 +129,7 @@ Needs:
     - [ ] Final boss
 
 Wants:
+- [ ] Improved Enemy AI
 - [ ] Items
     - [ ] Health/Mana potions
     - [ ] Damage buffs
