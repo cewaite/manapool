@@ -105,6 +105,9 @@ A tentative list that should be refined and granularized as we progress.
 Needs:
 - [ ] Add another ranged spell
 - [ ] Add another AOE spell
+- [ ] Spell Effects
+    - [ ] "pull"/slow effect for whirlpool
+    - [ ] firebolt sets enemies on fire
 - [ ] Add melee attacks
     - [ ] 3 hit combo
     - [ ] Successive melee regains mana
