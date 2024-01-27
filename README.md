@@ -34,6 +34,9 @@
     <li><a href="#usage">Usage</a></li>
       <ul>
         <li><a href="#spells">Spells</a></li>
+        <li><a href="#modular-stat-components">Modular Stat Components
+</a></li>
+        <li><a href="#hitbox-and-hurtboxes">Hitbox and Hurtboxes</a></li>
         <li><a href="#globals">Globals</a></li>
       </ul>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -87,6 +90,17 @@ Spells are structured in a hierarchy of inheritance, layed out at such:
     - Whirlpool...
 
 Each Spell has an associated SpellEffect, which is the actual projectile that is spawned when the spell is cast.
+
+### Modular Stat Components
+
+The Health, Mana and Stamina Components can got on any entity in any combination. You can overwrite their values in the inspector, but currently, these components look to their parent script (such as Player or Enemy, to determine and overwrite their attributes)
+
+### Hitbox and Hurtboxes
+
+Hitboxes collide with Hurtboxes to register damage. Pass a HealthComponent into a Hurtboxes inspector variable to connect them,
+
+There is a third hitbox: SpellHitbox. Used for SpellEffects, they have two additional variables: is_players (Checked upon collision with a Hurtbox to negate frendly spell damage) and destroy_on hit (I hope, self explanatory).
+
 
 ### Globals
 
