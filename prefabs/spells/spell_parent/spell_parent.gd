@@ -21,7 +21,7 @@ func _process(delta):
 
 # Function to cast the spell
 func cast_spell(move_vector, aim_vector, pos, is_players, delta):
-	if can_cast_spell(aim_vector):
+	if can_cast_spell(move_vector, aim_vector):
 		# Implement spell logic here
 		curr_cooldown = cooldown
 		
@@ -54,7 +54,7 @@ func spawn_spell_effect(move_vector, aim_vector, pos, is_players):
 	return effect_instance
 
 # Function to check if the spell can be cast
-func can_cast_spell(aim_vector) -> bool:
+func can_cast_spell(move_vector, aim_vector) -> bool:
 	# Implement any conditions to check if the spell can be cast
 	# For example, check if the player has enough mana, if there are no interruptions, 
 	# the spell isnt on cooldown, etc.

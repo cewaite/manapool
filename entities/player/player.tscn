@@ -253,22 +253,22 @@ position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_axjlh")
 
 [node name="HealthBar" parent="." instance=ExtResource("30_y2g36")]
-offset_left = -18.0
-offset_top = -45.0
-offset_right = 242.0
-offset_bottom = -30.0
-scale = Vector2(0.127165, 0.270699)
+offset_left = -19.0
+offset_top = -49.0
+offset_right = 241.0
+offset_bottom = -34.0
+scale = Vector2(0.144259, 0.34869)
 
 [node name="ManaBar" parent="." instance=ExtResource("31_r1fka")]
-offset_left = -18.0
-offset_top = -40.0
-offset_right = 222.0
-offset_bottom = -25.0
-scale = Vector2(0.137376, 0.272669)
+offset_left = -19.0
+offset_top = -42.0
+offset_right = 221.0
+offset_bottom = -27.0
+scale = Vector2(0.156657, 0.363728)
 
 [node name="StaminaBar" parent="." instance=ExtResource("32_gh03s")]
-offset_left = -18.0
-offset_top = -35.0
-offset_right = 222.0
-offset_bottom = -20.0
-scale = Vector2(0.137685, 0.299888)
+offset_left = -19.0
+offset_top = -34.0
+offset_right = 221.0
+offset_bottom = -19.0
+scale = Vector2(0.156957, 0.368208)
