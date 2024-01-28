@@ -121,7 +121,7 @@ Needs:
 - [ ] Add another ranged spell
 - [ ] Add another AOE spell
 - [ ] Spell Effects
-    - [ ] "pull"/slow effect for whirlpool
+    - [X] "pull"/slow effect for whirlpool
     - [ ] firebolt sets enemies on fire
 - [ ] Add melee attacks
     - [ ] 3 hit combo
