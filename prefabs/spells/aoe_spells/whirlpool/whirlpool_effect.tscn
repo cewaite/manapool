@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://prefabs/spell_hitbox.gd" id="1_q1blo"]
 
 [sub_resource type="Gradient" id="Gradient_tc0ip"]
-offsets = PackedFloat32Array(0.0367893, 0.622074, 0.879599, 1)
+offsets = PackedFloat32Array(0.0702341, 0.662207, 0.943144, 1)
 colors = PackedColorArray(0, 0.411765, 0.580392, 0, 0, 0.411765, 0.580392, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_rrhgu"]
@@ -18,16 +18,16 @@ emission_ring_height = 1.0
 emission_ring_radius = 100.0
 emission_ring_inner_radius = 120.0
 spread = 0.0
-angular_velocity_min = -218.85
-angular_velocity_max = 236.1
+angular_velocity_min = 235.93
+angular_velocity_max = 235.93
 orbit_velocity_min = 0.1
-orbit_velocity_max = 0.1
+orbit_velocity_max = 0.213
 radial_velocity_min = -5.0
 radial_velocity_max = -5.0
 gravity = Vector3(0, 0, 0)
 radial_accel_min = -200.0
-scale_min = 10.0
-scale_max = 10.0
+scale_min = 15.0
+scale_max = 15.0
 color_ramp = SubResource("GradientTexture1D_rrhgu")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mrqg6"]
@@ -36,8 +36,9 @@ color_ramp = SubResource("GradientTexture1D_rrhgu")
 script = ExtResource("1_fn6dr")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-amount = 100
+amount = 200
 process_material = SubResource("ParticleProcessMaterial_0eh2b")
+lifetime = 1.1
 
 [node name="SpellHitBox" type="Area2D" parent="."]
 script = ExtResource("1_q1blo")

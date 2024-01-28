@@ -45,7 +45,12 @@ func spawn_spell_effect(move_vector, aim_vector, is_players, pos):
 		return null
 	
 	effect_instance.position = pos
-	effect_instance.direction = aim_vector.normalized()
+	
+	if aim_vector != Vector2.ZERO:
+		effect_instance.direction = aim_vector.normalized()
+	elif move_vector != Vector2.ZERO:
+		effect_instance.direction = move_vector.normalized()
+	
 	effect_instance.speed = speed
 	effect_instance.damage = damage
 	effect_instance.destroy_on_hit = destroy_on_hit
@@ -60,11 +65,11 @@ func spawn_spell_effect(move_vector, aim_vector, is_players, pos):
 	return effect_instance
 	
 # Function to check if the spell can be cast
-func can_cast_spell(aim_vector) -> bool:
+func can_cast_spell(move_vector, aim_vector) -> bool:
 	# Implement any conditions to check if the spell can be cast
 	# For example, check if the player has enough mana, if there are no interruptions, 
 	# the player isn't dodging, the spell isnt on cooldown, etc.
-	if aim_vector != Vector2.ZERO and curr_cooldown == 0.0 and mana_comp.curr_mana >= mana_cost:
+	if (aim_vector != Vector2.ZERO or move_vector != Vector2.ZERO) and curr_cooldown == 0.0 and mana_comp.curr_mana >= mana_cost:
 		return true
 	else:
 		print("Cannot cast!")
