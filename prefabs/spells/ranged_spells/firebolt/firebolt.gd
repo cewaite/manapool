@@ -11,3 +11,4 @@ func _init():
 	destroy_on_hit = true
 	group_name = "Firebolts"
 	spell_effect = preload("res://prefabs/spells/ranged_spells/firebolt/firebolt_effect.tscn")
+	status_effects = [OnFire.new()]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://de587ctoheer1"]
+
+[ext_resource type="Script" path="res://prefabs/status_effects/on_fire/on_fire.gd" id="1_dka2p"]
+
+[sub_resource type="Gradient" id="Gradient_snomp"]
+offsets = PackedFloat32Array(0.0133779, 0.090301, 0.949833, 1)
+colors = PackedColorArray(1, 0.741176, 0.180392, 0, 1, 0.741176, 0.180392, 1, 0.798792, 0.138451, 0.123138, 1, 0.8, 0.137255, 0.121569, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lbcwt"]
+gradient = SubResource("Gradient_snomp")
+width = 100
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ivaoo"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+direction = Vector3(0, -1, 0)
+angular_velocity_min = -45.0
+angular_velocity_max = 45.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 25.0
+linear_accel_max = 50.0
+scale_min = 2.0
+scale_max = 5.0
+color_ramp = SubResource("GradientTexture1D_lbcwt")
+
+[node name="OnFire" type="GPUParticles2D"]
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_ivaoo")
+lifetime = 0.3
+speed_scale = 2.0
+script = ExtResource("1_dka2p")

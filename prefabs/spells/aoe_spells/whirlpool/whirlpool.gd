@@ -8,6 +8,7 @@ func _init():
 	destroy_on_hit = false
 	group_name = "Whirlpools"
 	spell_effect = preload("res://prefabs/spells/aoe_spells/whirlpool/whirlpool_effect.tscn")
+	status_effects = [Slow.new()]
 
 func spawn_spell_effect(move_vector, aim_vector, is_players, pos):
 	if spell_effect == null:

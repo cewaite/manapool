@@ -8,7 +8,8 @@ class_name SpellParent
 @export var damage: int = 10
 @export var destroy_on_hit: bool = false
 @export var group_name: String = "Spells"
-@export var spell_effect: PackedScene # Path to your particle effect scene
+var spell_effect: PackedScene # Path to your particle effect scene
+var status_effects: Array[StatusParent]
 
 var mana_comp: ManaComponent
 var curr_cooldown: float = 0.0
