@@ -15,7 +15,7 @@ color = Color(1, 0.741176, 0.180392, 1)
 offsets = PackedFloat32Array(0.0133779, 0.090301, 0.949833, 1)
 colors = PackedColorArray(1, 0.741176, 0.180392, 0, 1, 0.741176, 0.180392, 1, 0.798792, 0.138451, 0.123138, 1, 0.8, 0.137255, 0.121569, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_lbcwt"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xvtao"]
 gradient = SubResource("Gradient_8bow0")
 width = 100
 
@@ -32,7 +32,7 @@ linear_accel_min = 25.0
 linear_accel_max = 50.0
 scale_min = 2.0
 scale_max = 5.0
-color_ramp = SubResource("GradientTexture1D_lbcwt")
+color_ramp = SubResource("GradientTexture1D_xvtao")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o6pgy"]
 radius = 30.7318

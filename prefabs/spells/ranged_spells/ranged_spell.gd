@@ -11,6 +11,7 @@ func _init():
 	destroy_on_hit = false
 	group_name = "RangedSpell"
 	# spell_effect = preload("res://prefabs/spells/ranged_spells/firebolt/firebolt_effect.tscn")
+	# status_effects = ...
 
 #func cast_spell(move_vector, aim_vector, pos, dashing, delta):
 	#if can_cast_spell(aim_vector, dashing):
@@ -56,6 +57,7 @@ func spawn_spell_effect(move_vector, aim_vector, is_players, pos):
 	effect_instance.destroy_on_hit = destroy_on_hit
 	effect_instance.duration = duration
 	effect_instance.is_players = is_players
+	effect_instance.status_effects = status_effects
 
 	add_child(effect_instance)
 	effect_instance.add_to_group(group_name)

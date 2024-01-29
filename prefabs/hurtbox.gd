@@ -19,6 +19,6 @@ func _on_area_entered(hitbox: HitBox):
 			health_comp.take_damage(hitbox.damage)
 
 		if hitbox is SpellHitBox:
-			hitbox.owner.apply_effects(owner)
+			hitbox.owner.apply_status(owner)
 			if hitbox.destroy_on_hit:
 				hitbox.owner.queue_free()
